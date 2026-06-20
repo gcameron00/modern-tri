@@ -1,15 +1,154 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light dark" />
-    <title>About</title>
-    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#070b16" />
+    <title>About — Modern Triathlon</title>
+    <meta
+      name="description"
+      content="The story, philosophy, and rules behind the Modern Triathlon: run, bike, cocktails. A spoof endurance brand for the body and the mind."
+    />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script defer src="/assets/js/main.js"></script>
   </head>
   <body>
-    <h1>About</h1>
-    <p><a href="/">Back home</a></p>
+    <!-- ============================ Header =========================== -->
+    <header class="site-header">
+      <div class="wrap nav">
+        <a class="brand" href="/" aria-label="Modern Triathlon home">
+          <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <circle cx="16" cy="16" r="15" stroke="#f5b942" stroke-width="2" />
+            <path
+              d="M9 20 L14 12 L18 18 L23 11"
+              stroke="#f5b942"
+              stroke-width="2.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <b>Modern<span>Tri</span></b>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="/#disciplines">The Disciplines</a></li>
+          <li><a href="/#why">Why It Works</a></li>
+          <li><a href="/#rules">The Rules</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a class="btn btn-primary" href="/#join">Join the Circuit</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero wrap">
+        <span class="hero-badge">The Manifesto</span>
+        <h1>Why run, bike, <span style="color: var(--gold)">cocktails</span>?</h1>
+        <p class="lead" style="margin-inline: auto">
+          Because somewhere between the start line and the swim, sport forgot to have fun.
+          We're here to put the celebration back where it belongs — at the finish.
+        </p>
+      </section>
+
+      <section class="section wrap">
+        <div class="prose">
+          <h2>The origin story</h2>
+          <p>
+            The traditional triathlon is a triumph of human endurance: swim, bike, run,
+            in punishing succession. We admire it enormously. We also noticed that the
+            swim is cold, the open water is full of surprises, and nobody has ever
+            finished one craving more chlorine.
+          </p>
+          <p>
+            So we ran a thought experiment. What if you kept the two disciplines everyone
+            actually loves — the run and the ride — and replaced the third with the single
+            most universally celebrated act of recovery known to humankind? The
+            <strong>cocktail</strong> leg was born.
+          </p>
+
+          <div class="callout">
+            Modern Triathlon is a spoof. There is no governing body, no qualifying time,
+            and no medal podium — only a well-built drink and the satisfaction of a
+            finish line crossed.
+          </div>
+
+          <h2>A challenge for the body</h2>
+          <p>
+            Make no mistake: the first two legs are the real deal. A 5-kilometre run
+            followed by a 20-kilometre ride is a genuine aerobic effort. Your heart rate
+            climbs, your legs negotiate, and your willpower does the quiet heavy lifting.
+            The work is honest, and the fatigue is earned.
+          </p>
+
+          <h2>A reward for the mind</h2>
+          <p>
+            What sets the Modern Triathlon apart is the ending. Most endurance events
+            leave you depleted at a finish line with a foil blanket and a banana. Ours
+            leaves you at a finish line with a ceremony. The cocktail leg is a deliberate
+            full stop — a moment to exhale, to toast the effort, and to let the mind catch
+            up with the body it just pushed.
+          </p>
+          <ul>
+            <li><strong>Effort, then ease:</strong> the contrast is the whole point.</li>
+            <li><strong>Patience rewarded:</strong> delayed gratification you can taste.</li>
+            <li><strong>Community over competition:</strong> nobody loses a toast.</li>
+          </ul>
+
+          <h2>How it works</h2>
+          <ul>
+            <li><strong>Leg 1 — Run:</strong> 5 km on foot to earn the saddle.</li>
+            <li><strong>Leg 2 — Bike:</strong> 20 km rolling loop, helmet on.</li>
+            <li><strong>Leg 3 — Cocktail:</strong> one perfectly built drink, judged on craft and joy.</li>
+          </ul>
+          <p>
+            Mocktails are wholeheartedly welcome — the medal tastes exactly the same. The
+            only rule that truly matters is to hydrate between legs, finish responsibly,
+            and chase a personal best in mood.
+          </p>
+
+          <div class="callout">
+            Please train sensibly, ride safely, and enjoy any alcohol responsibly. This
+            site is satire and not an invitation to combine drinking with exercise.
+          </div>
+
+          <p style="margin-top: 2rem">
+            <a class="btn btn-primary" href="/#join">Back to the start line</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================ Footer ========================== -->
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-inner">
+          <p>© <span data-year>2026</span> Modern Triathlon — Run · Bike · Cocktails</p>
+          <ul class="footer-links">
+            <li><a href="/#disciplines">Disciplines</a></li>
+            <li><a href="/#why">Philosophy</a></li>
+            <li><a href="/">Home</a></li>
+          </ul>
+        </div>
+        <p class="disclaimer">
+          A light-hearted spoof. Not a real sanctioned event.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

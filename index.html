@@ -1,17 +1,329 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light dark" />
-    <title>Home</title>
-    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#070b16" />
+    <title>Modern Triathlon — Run · Bike · Cocktails</title>
+    <meta
+      name="description"
+      content="The modern triathlon, reimagined: run, bike, cocktails. A tongue-in-cheek endurance brand celebrating the noblest progression in sport."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Modern Triathlon — Run · Bike · Cocktails" />
+    <meta
+      property="og:description"
+      content="Three disciplines. One glorious finish line. The modern triathlon is run, bike, cocktails."
+    />
+
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
     <script defer src="/assets/js/main.js"></script>
   </head>
   <body>
-    <h1>It works 🎉</h1>
-    <p>This site is deployed using Cloudflare Pages.</p>
-    <p><a href="/about/">About</a></p>
+    <!-- ============================ Header =========================== -->
+    <header class="site-header">
+      <div class="wrap nav">
+        <a class="brand" href="/" aria-label="Modern Triathlon home">
+          <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <circle cx="16" cy="16" r="15" stroke="#f5b942" stroke-width="2" />
+            <path
+              d="M9 20 L14 12 L18 18 L23 11"
+              stroke="#f5b942"
+              stroke-width="2.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <b>Modern<span>Tri</span></b>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#disciplines">The Disciplines</a></li>
+          <li><a href="#why">Why It Works</a></li>
+          <li><a href="#rules">The Rules</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a class="btn btn-primary" href="#join">Join the Circuit</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============================= Hero ========================== -->
+      <section class="hero wrap">
+        <span class="hero-badge">Est. Happy Hour · A Spoof Endurance Brand</span>
+        <h1>
+          The Modern Triathlon is<br />
+          <span class="grad">Run · Bike · Cocktails</span>
+        </h1>
+        <p class="hero-sub">
+          Three disciplines. One glorious finish line. Forget the swim — we replaced
+          the cold open water with something a little more <em>refined</em>.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#disciplines">See the Progression</a>
+          <a class="btn btn-ghost" href="#why">Why It's Worth It</a>
+        </div>
+
+        <!-- ============ Central progression: run → bike → cocktail ===== -->
+        <div class="progression reveal" id="disciplines">
+          <div class="flow">
+            <!-- Leg 1 — RUN -->
+            <article class="leg leg--run">
+              <span class="leg-icon" aria-hidden="true">
+                <!-- runner -->
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.4"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="40" cy="12" r="5" fill="currentColor" stroke="none" />
+                  <path d="M41 20 L30 30 L37 36 L34 50" />
+                  <path d="M30 30 L18 34" />
+                  <path d="M37 36 L48 40" />
+                  <path d="M34 50 L24 56" />
+                  <path d="M41 20 L52 26" />
+                </svg>
+              </span>
+              <span class="leg-num">Leg 01</span>
+              <h3>Run</h3>
+              <p>Lace up and burn the warm-up. A brisk 5K to earn the saddle — and the thirst.</p>
+              <span class="leg-meta">Pace · Sweat · Stride</span>
+            </article>
+
+            <div class="flow-arrow" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path class="dash" d="M5 20 H30" />
+                <path d="M24 13 L33 20 L24 27" />
+              </svg>
+            </div>
+
+            <!-- Leg 2 — BIKE -->
+            <article class="leg leg--bike">
+              <span class="leg-icon" aria-hidden="true">
+                <!-- bicycle -->
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="16" cy="44" r="11" />
+                  <circle cx="48" cy="44" r="11" />
+                  <path d="M16 44 L28 24 L42 24" />
+                  <path d="M28 24 L36 44 L48 44" />
+                  <path d="M22 24 L32 24" />
+                  <circle cx="38" cy="18" r="3" fill="currentColor" stroke="none" />
+                </svg>
+              </span>
+              <span class="leg-num">Leg 02</span>
+              <h3>Bike</h3>
+              <p>Settle into the drops and cruise the scenic loop. Cadence high, spirits higher.</p>
+              <span class="leg-meta">Speed · Sun · Spin</span>
+            </article>
+
+            <div class="flow-arrow" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path class="dash" d="M5 20 H30" />
+                <path d="M24 13 L33 20 L24 27" />
+              </svg>
+            </div>
+
+            <!-- Leg 3 — COCKTAIL -->
+            <article class="leg leg--cocktail">
+              <span class="leg-icon" aria-hidden="true">
+                <!-- martini glass -->
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 16 L52 16 L32 38 Z" />
+                  <path d="M32 38 L32 54" />
+                  <path d="M22 54 L42 54" />
+                  <path d="M20 16 L44 16" />
+                  <circle cx="40" cy="22" r="3.4" fill="currentColor" stroke="none" />
+                </svg>
+              </span>
+              <span class="leg-num">Leg 03</span>
+              <h3>Cocktails</h3>
+              <p>Cross the line, claim your shaker. Electrolytes optional; a perfect garnish is not.</p>
+              <span class="leg-meta">Shake · Stir · Savour</span>
+            </article>
+          </div>
+
+          <!-- Stats strip -->
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-num">3</div>
+              <div class="stat-label">Disciplines</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">0</div>
+              <div class="stat-label">Cold Swims</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">∞</div>
+              <div class="stat-label">Garnish Options</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Why it works ========================= -->
+      <section class="section wrap" id="why">
+        <span class="eyebrow">The Philosophy</span>
+        <h2 class="section-title">A challenge for the body.<br />A reward for the mind.</h2>
+        <p class="lead">
+          Endurance sport is brutal on purpose. We kept the brutal part — then we gave
+          it a finish line worth chasing. The result is a discipline that punishes the
+          legs and pampers the spirit.
+        </p>
+
+        <div class="split">
+          <article class="panel panel--challenge reveal">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M13 2 L3 14 H12 L11 22 L21 10 H12 Z" />
+              </svg>
+              The Challenge
+            </h3>
+            <p>
+              The run wrings you out. The bike asks for everything your legs have left.
+              By the time the finish line is in sight, every system in your body has been
+              tested — heart rate up, focus sharp, willpower stretched thin. This is real
+              effort, the kind that earns its name. The third leg isn't a shortcut; it's
+              the medal you drink.
+            </p>
+          </article>
+
+          <article class="panel panel--reward reveal">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 21s-7-4.5-9.5-9A5 5 0 0 1 12 6a5 5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9Z" />
+              </svg>
+              The Reward
+            </h3>
+            <p>
+              Then comes the exhale. The mind, flooded with endorphins and the quiet pride
+              of a job finished, finally gets to celebrate. A cocktail at the line isn't
+              indulgence — it's ceremony. It marks the moment the work is done and the joy
+              begins. Body satisfied, mind restored, glass raised.
+            </p>
+          </article>
+        </div>
+
+        <ul class="benefits">
+          <li class="benefit reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z" />
+            </svg>
+            <h4>Cardiovascular Glory</h4>
+            <p>Two legs of genuine aerobic work — your heart logs the miles, no asterisk.</p>
+          </li>
+          <li class="benefit reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 7v5l3 3" />
+            </svg>
+            <h4>Earned Patience</h4>
+            <p>Delayed gratification, distilled. The wait makes the toast taste better.</p>
+          </li>
+          <li class="benefit reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2Z" />
+              <path d="M9 21h6" />
+            </svg>
+            <h4>Mental Clarity</h4>
+            <p>Effort, then ease. The post-finish glow is the best meditation you'll book.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ======================== The Rules ========================= -->
+      <section class="section wrap" id="rules">
+        <span class="eyebrow">The Format</span>
+        <h2 class="section-title">Three legs, one shaker</h2>
+        <p class="lead">
+          Officially unofficial. Wildly unsanctioned. Here's how a Modern Triathlon runs.
+        </p>
+
+        <div class="rules">
+          <div class="rule reveal">
+            <span class="rule-num">1</span>
+            <div>
+              <h4>The Run — 5 kilometres</h4>
+              <p>Off the start line on foot. Trail, track, or boardwalk; just keep it honest and keep it moving.</p>
+            </div>
+          </div>
+          <div class="rule reveal">
+            <span class="rule-num">2</span>
+            <div>
+              <h4>The Bike — 20 kilometres</h4>
+              <p>Transition to two wheels for a rolling loop. Helmets mandatory, scenery encouraged.</p>
+            </div>
+          </div>
+          <div class="rule reveal">
+            <span class="rule-num">3</span>
+            <div>
+              <h4>The Cocktail — 1 perfectly built drink</h4>
+              <p>Cross the line and assemble your signature serve. Judged on craft, balance, and triumphant presentation.</p>
+            </div>
+          </div>
+          <div class="rule reveal">
+            <span class="rule-num">★</span>
+            <div>
+              <h4>The Golden Rule</h4>
+              <p>Hydrate between every leg. Finish responsibly. The only PB that matters is <em>Personal Best mood</em>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================== CTA ============================= -->
+      <section class="section wrap" id="join">
+        <div class="cta-band reveal">
+          <h2>Ready to chase the finish line?</h2>
+          <p>
+            There's no entry fee, no governing body, and absolutely no swimming.
+            Grab your shoes, pump your tyres, and chill a glass.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="/about/">Read the Manifesto</a>
+            <a class="btn btn-ghost" href="#disciplines">Back to the Top</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================ Footer ========================== -->
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-inner">
+          <p>© <span data-year>2026</span> Modern Triathlon — Run · Bike · Cocktails</p>
+          <ul class="footer-links">
+            <li><a href="#disciplines">Disciplines</a></li>
+            <li><a href="#why">Philosophy</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </div>
+        <p class="disclaimer">
+          A light-hearted spoof. Not a real sanctioned event. Please train sensibly,
+          ride safely, and enjoy any cocktails responsibly — or mocktails, the medal tastes the same.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
