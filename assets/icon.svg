@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Full-bleed maskable app icon for Modern Triathlon.
+       No rounded corners: iOS/Android apply their own mask. The mark sits
+       inside the ~80% maskable safe zone. -->
+  <defs>
+    <linearGradient id="iconBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1326"/>
+      <stop offset="1" stop-color="#070b16"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#iconBg)"/>
+  <!-- Modern Triathlon mark: a finish-line peak rising into a glass -->
+  <g transform="translate(46,32) scale(14)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7 19 L13 10 L17 16 L23 8" stroke="#f5b942" stroke-width="2.4"/>
+    <circle cx="23" cy="8" r="2.4" fill="#ff5a5f" stroke="none"/>
+    <path d="M11 24 H21" stroke="#28d0c8" stroke-width="2.2"/>
+  </g>
+</svg>
