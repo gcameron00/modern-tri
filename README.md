@@ -35,7 +35,12 @@ modern-tri/
 │   │   └── styles.css       # Full design system (CSS custom properties)
 │   ├── js/
 │   │   └── main.js          # Mobile nav, scroll-reveal, footer year
-│   └── favicon.svg          # Themed SVG favicon
+│   ├── favicon.svg          # Themed SVG favicon (browser tab)
+│   ├── icon.svg             # Full-bleed maskable app-icon source
+│   └── og-image.svg         # Open Graph / social-share image source (1200×630)
+├── site.webmanifest        # PWA / "Add to Home Screen" manifest
+├── scripts/
+│   └── generate-icons.sh    # Rasterizes the SVGs → PNGs (apple-touch-icon, OG, …)
 ├── docs/
 │   └── IMPLEMENTATION-PLAN.md  # Build-out plan & roadmap
 ├── README.md
@@ -61,6 +66,37 @@ Then open <http://localhost:8080>.
 
 > Opening `index.html` directly via `file://` mostly works, but the root-relative
 > links (`/about/`, `/assets/...`) are happier behind a real server.
+
+---
+
+## 🖼 Icons & social images
+
+The favicon (`assets/favicon.svg`) is an SVG, which modern iOS/Safari shows in the
+browser tab. But **iPhones can't use SVG for the home-screen icon or for
+iMessage/social link previews** — those surfaces require real raster `.png` files.
+
+The raster assets are produced from the SVG sources by a small generator script:
+
+```bash
+bash scripts/generate-icons.sh
+```
+
+It auto-detects any one of `rsvg-convert` (librsvg), `inkscape`, ImageMagick
+(`magick`/`convert`), or `python3` + `cairosvg`, and writes:
+
+| Output                         | Size      | Used for                                   |
+| ------------------------------ | --------- | ------------------------------------------ |
+| `assets/apple-touch-icon.png`  | 180×180   | iOS "Add to Home Screen" icon              |
+| `assets/icon-192.png`          | 192×192   | PWA / Android manifest icon                |
+| `assets/icon-512.png`          | 512×512   | PWA / Android manifest icon                |
+| `assets/maskable-512.png`      | 512×512   | Maskable PWA icon                          |
+| `assets/favicon-32.png`        | 32×32     | Classic raster favicon fallback            |
+| `assets/favicon-180.png`       | 180×180   | Extra raster fallback                      |
+| `assets/og-image.png`          | 1200×630  | Open Graph / Twitter / iMessage preview    |
+
+The HTML in `index.html`, `about/index.html`, and `404.html` already references
+these paths, so once you run the script and commit the generated PNGs, the icons
+and share previews work everywhere — including on iPhones.
 
 ---
 
